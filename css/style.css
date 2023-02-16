@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: monospace, sans-serif;
+}
+
+main.main {
+  background-color: #757373;
+  width: 100%;
+  height: 100vh;
+}
+
+main.main > .health {
+  width: 100%;
+  background-color: #771037;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main.main > .health > .hp {
+  width: 300px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+main.main > .health > .hp > span.bar {
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  background-color: hsla(0, 100%, 50%);
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  position: relative;
+}
+
+main.main > .health > .hp span.hp-percent {
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+  font-size: 16px;
+  color: #fff;
+}
+
+main.main > .health > #logo {
+  width: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  bottom: -25px;
+  z-index: 100;
+  background-color: #771037;
+}
+
+main.main > .health > #logo > img {
+  border: 5px solid #771037;
+  width: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.container {
+  background: url(../images/arena.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .box {
+  position: relative;
+  width: 560px;
+  height: 450px;
+}
+.container .char {
+  cursor: pointer;
+}
+.container .player {
+  /* padding: 90px; */
+  /* background-color: burlywood; */
+  position: absolute;
+  left: 8px;
+  bottom: 5px;
+  width: 350px;
+}
+
+.container .char > img {
+  width: 100%;
+}
+.container .enemy {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.game-over {
+  background-color: #771037;
+  width: 500px;
+  height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  -webkit-transform: translate(-50%, -35%);
+  -moz-transform: translate(-50%, -35%);
+  -ms-transform: translate(-50%, -35%);
+  -o-transform: translate(-50%, -35%);
+  box-shadow: 0px 0px 20px 0px #771037;
+  color: #eee;
+  z-index: 100;
+}
+
+.game-over > h1 {
+  font-size: 4.2rem;
+  margin: 20px;
+}
+
+.game-over > p {
+  font-size: 2.2rem;
+  color: gold;
+}
+
+.game-over > .winner {
+  width: 300px;
+  transform: translate(-15%, -15%);
+  -webkit-transform: translate(-15%, -15%);
+  -moz-transform: translate(-15%, -15%);
+  -ms-transform: translate(-15%, -15%);
+  -o-transform: translate(-15%, -15%);
+}
+
+.game-over > .winner > img {
+  width: 100%;
+}
